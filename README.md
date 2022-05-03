@@ -1,7 +1,8 @@
 # Renfield
 
 Renfield is a tool I am writing in order to syncronize multiple cheap external
-hard drives and maintain an easily accessible database that 
+hard drives and maintain an easily accessible database that I can query to find
+the file(s) I want.
 
 ## Why does this exist?
 
@@ -29,11 +30,11 @@ I wanted storage that I can reach over the local network so I can stream video
 to my smart TV. I also wanted backups so when the hard drives fail, I don't need
 to go down the `e2fck` rabbithole. I've been there. It's dark.
 
-So after speaking with [a friend](), I realized that the more practical solution
-would be to buy *cheap* external hard drives, and *lots* of them. The most
-cost-efficient drives are the 4TB segment, at least here in India. I plan on
-buying a couple of them every few months to grow out my collection, *and* to
-grow out the backups.
+So after speaking with [a friend](https://github.com/krishnaghatti), I realized
+that the more practical solution would be to buy *cheap* external hard drives,
+and *lots* of them. The most cost-efficient drives are the 4TB segment, at
+least here in India. I plan on buying a couple of them every few months to grow
+out my collection, *and* to grow out the backups.
 
 But actually performing these backups and keeping track of what's where is a
 nightmarish task. You'd need not only to maintain a list of your files in a
@@ -56,7 +57,21 @@ I want to keep things simple. Renfield should write all the data into a sqlite
 database at first, and eventually I should figure out a way to use either
 postgres or maybe a NoSQL db on the cloud.
 
-## Why the Name?
+## What about X?
+
+I've considered manually trying to use `rsync` and using something like
+[`rsync-sidekick`](https://github.com/m-manu/rsync-sidekick) to do this manually.
+I'm not going to use those because it's not just viable to manually maintain a
+list of everything I've stored on different drives. I could use a notebook to
+store these, but that's just more manual work.
+
+I'm not aware of any other ways to do this, but [ I'm asking around
+](https://www.reddit.com/r/DataHoarder/comments/uh98e2/how_do_you_catalogue_synchronize_your_external/)
+so that I can find them and learn from them. I'm aware of [ SyncThing,
+](https://syncthing.net/) and I'm not a fan of keeping the hard drives
+connected all the time. Especially since they're cheap drives.
+
+## Why the Name `Renfield`?
 
 Renfield is the name of Count Dracula's [deranged, fanatically devoted servant
 and *familiar*.](https://en.wikipedia.org/wiki/Renfield). I figured any tool I
